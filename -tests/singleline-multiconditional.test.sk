@@ -1,0 +1,12 @@
+test "single-line AND and OR conditions":
+    set {_and} to false
+    set {_or} to false
+
+    if 1 is 1 && 2 is 2:
+        set {_and} to true
+
+    if 1 is 2 || 2 is 2:
+        set {_or} to true
+
+    assert {_and} is true with "AND condition should pass"
+    assert {_or} is true with "OR condition should pass"
